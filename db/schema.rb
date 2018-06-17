@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180603124843) do
+ActiveRecord::Schema.define(version: 20180617074552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -331,6 +331,12 @@ ActiveRecord::Schema.define(version: 20180603124843) do
     t.string "tshirt_cut"
     t.text "tech_expertise", default: [], array: true
     t.text "tech_interest", default: [], array: true
+    t.boolean "opted_in_newsletter", default: false
+    t.boolean "opted_in_announcements", default: false
+    t.boolean "opted_in_marketing_announcements", default: false
+    t.boolean "opted_in_surveys", default: false
+    t.boolean "opted_in_sponsorships", default: false
+    t.boolean "opted_in_applications_open", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
   end
 
